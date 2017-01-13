@@ -1,6 +1,19 @@
-.room-container {
+.sidebar {
   position: relative;
-  float: left;
+  clear: both;
   padding: 0.5rem;
+  height: 1000px
   background-color: rgb(192,192,192)
+}
+
+.sidebar #title {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 30px;
+}
+
+.sidebar .rooms {
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
 }
