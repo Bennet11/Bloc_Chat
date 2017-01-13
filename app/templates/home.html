@@ -2,8 +2,9 @@
   <h1 id="sidebar-title">Bloc Chat</h1>
 
   <section class="rooms">
-    <div ng-repeat="room in home.rooms">
-      {{ room.name }}
+    <!-- {{ home.chatRooms }} -->
+    <div ng-repeat="myRoom in home.chatRooms">
+      <h3>{{ myRoom.$value }}</h3>
     </div>
   </section>
 </section>
