@@ -1,11 +1,10 @@
 (function() {
-  function HomeCtrl(Room, Modal) {
+  function HomeCtrl(Room) {
     this.chatRooms = Room.all;
     this.getRooms = Room.addRoom;
-    this.newRoom = Modal.createRoom;
   }
 
   angular
     .module('blocChat')
-    .controller('HomeCtrl', ['Room', 'Modal', HomeCtrl]);
+    .controller('HomeCtrl', ['Room', HomeCtrl]);
 })();

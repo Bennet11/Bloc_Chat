@@ -1,5 +1,16 @@
-<h4>Create A Room</h4>
-<div>
-  <button class="btn btn-primary" ng-click="create()">create</button>
-  <button class="btn btn-primary" ng-click="cancel()">cancel</button>
+<div ng-controller="ModalCtrl as create">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Create A Room</h4>
+  </div>
+
+  <div class="modal-body" id="modal-body">
+    <input type="text" placeholder="put title here" ng-model="user.roomName"></input>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="create()">create</button>
+    <button class="btn btn-primary" ng-click="cancel()">cancel</button>
+  </div>
+
+  <button type="button" ng-click="create.open()">Create Room</button>
 </div>
