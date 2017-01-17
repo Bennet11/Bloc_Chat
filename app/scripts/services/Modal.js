@@ -1,7 +1,7 @@
 (function () {
   function Modal($uibModal) {
-    function createRoom() {
-      return $uibModal.open({
+    var createRoom = function() {
+      $uibModal.open({
         templateUrl: '/templates/modal.html'
         controller: function ($scope, $uibModalInstance) {
           $scope.cancel = function() {
@@ -15,7 +15,7 @@
         size: 'sm'
       });
     }
-    return newChatRoom();
+    return createRoom();
   }
 
   angular
