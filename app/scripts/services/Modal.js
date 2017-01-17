@@ -1,9 +1,24 @@
 (function () {
-  function Modal($firebase, Room) {
+  function Modal($uibModal) {
+    function createRoom() {
+      return $uibModal.open({
+        templateUrl: '/templates/modal.html'
+        controller: function ($scope, $uibModalInstance) {
+          $scope.cancel = function() {
+            $uibModalInstance.dismiss('Cancel');
+          };
 
+          $scope.create = function() {
+            $uibModalInstance.close();
+          };
+        },
+        size: 'sm'
+      });
+    }
+    return newChatRoom();
   }
 
   angular
     .module('blocChat')
-    .factory('Modal', ['$firebase', Modal]);
-});
+    .factory('Modal', ['$uibModal', Modal]);
+})();

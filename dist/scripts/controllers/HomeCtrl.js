@@ -1,8 +1,8 @@
 (function() {
-  function HomeCtrl(Room, Create) {
+  function HomeCtrl(Room, Modal) {
     this.chatRooms = Room.all;
     this.getRooms = Room.addRoom;
-    this.newRoom = Create;
+    this.newRoom = Modal.createRoom;
   }
 
   angular

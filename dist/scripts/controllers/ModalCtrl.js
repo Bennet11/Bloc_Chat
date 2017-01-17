@@ -1,9 +1,18 @@
 (function () {
-  function ModalCtrl($modal) {
+  function ModalCtrl($uibModal) {
     this.createRoom = function () {
-      $modal.open({
-        controller: 'ModalCtrl as modal',
+      var modalInstance = $uibModal.open({
         templateUrl: '/templates/modal.html'
+        controller: function ($scope, Modal) {
+          $scope.cancel = function() {
+            Modal.dismiss('Cancel');
+          };
+
+          $scope.create = function() {
+            Modal.close();
+          };
+        },
+        size: 'sm'
       });
     }
   }
