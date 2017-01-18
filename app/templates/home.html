@@ -1,11 +1,17 @@
-<section class="sidebar">
-  <h1 id="sidebar-title">Bloc Chat</h1>
+<div ng-controller="HomeCtrl as home">
+  <div class="sidebar">
+    <h1 id="sidebar-title">Bloc Chat</h1>
 
-  <section class="rooms">
-    {{ home.chatRooms }}
-    <div ng-repeat="myRoom in home.chatRooms">
-      <h3>{{ myRoom.$value }}</h3>
+    <div class="rooms">
+      <div ng-repeat="myRoom in home.chatRooms">
+        <h3>{{ home.allRooms }}</h3>
+      </div>
+      <button class="addbutton" ng-click="open()">add room</button>
+        <div class="column fourth">
+          <div class="rooms" ng-repeat="room in allRooms">
+            <h4> {{ room.name }} </h4>
+          </div>
+        </div>
     </div>
-    <button class="addbutton" ng-click="home.getRooms()">add room</button>
-  </section>
-</section>
+  </div>
+</div>

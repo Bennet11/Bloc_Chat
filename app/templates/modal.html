@@ -1,16 +1,14 @@
-<div ng-controller="ModalCtrl as create">
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-title">Create A Room</h4>
-  </div>
+<div class="modal-header">
+  <h4 class="modal-title">Create New Chat Room</h4>
+</div>
 
-  <div class="modal-body" id="modal-body">
-    <input type="text" placeholder="put title here" ng-model="user.roomName"></input>
+<div class="modal-body" id="modal-body">
+  <div class="form-group">
+    <input type="text" placeholder="Enter new chat room name..." class="form-control" ng-model="text">
   </div>
+</div>
 
-  <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="create()">create</button>
-    <button class="btn btn-primary" ng-click="cancel()">cancel</button>
-  </div>
-
-  <button type="button" ng-click="create.open()">Create Room</button>
+<div class="modal-footer">
+  <button class="btn btn-success" ng-click="ok()">create</button>
+  <button class="btn btn-danger" ng-click="cancel()">cancel</button>
 </div>

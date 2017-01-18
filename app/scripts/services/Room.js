@@ -3,11 +3,13 @@
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
 
+    var addRoom = function(newRoom) {
+      rooms.$add({ name: newRoom });
+    }
+
     return {
       all: rooms,
-      addRoom: function(room) {
-        rooms.$add({ name: "my Room" })
-      }
+      createRoom: addRoom
     };
   }
 
