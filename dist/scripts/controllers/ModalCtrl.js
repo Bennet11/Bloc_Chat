@@ -1,17 +1,33 @@
 (function () {
-  function ModalCtrl($scope, $uibModalInstance){
-    $scope.text = "";
+  function ModalCtrl($uibModal) {
+    this.createRoom = function() {
+      var modal = $uibModal.open({
+        templateUrl: 'templates/modal.html',
+        controllerAs: 'modalInstance',
+        controller: function($uibModalInstance) {
+          this.roomName = "";
+            var addRoom = function(name) {
+              Room.createRoom()
+              console.log(name);
+            };
 
-    $scope.ok = function(){
-      $uibModalInstance.close($scope.text);
-    };
+          this.ok = function(){
+            $uibModalInstance.close(this.roomName);
+          };
 
-    $scope.cancel = function() {
-      $uibModalInstance.dismiss('cancel')
+          this.cancel = function() {
+            $uibModalInstance.dismiss('cancel')
+          };
+        },
+        size: 'sm'
+      });
+      modal.result.then(function (name) {
+        firebase.database().ref().child("rooms").push({ "name": name })
+      });
     }
   }
 
 angular
   .module('blocChat')
-  .controller('ModalCtrl', ['$scope', '$uibModalInstance', ModalCtrl])
+  .controller('ModalCtrl', ['$uibModal', ModalCtrl])
 })();

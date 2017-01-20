@@ -9,7 +9,6 @@
 
     return {
       all: rooms,
-      messageFinder: getByRoomId,
       createRoom: addRoom
     };
   }

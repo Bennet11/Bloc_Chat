@@ -6,7 +6,9 @@
       <div ng-repeat="myRoom in home.chatRooms">
         <h3>{{ home.allRooms }}</h3>
       </div>
-      <button class="addbutton" ng-click="open()">add room</button>
+      <div ng-controller="ModalCtrl as modal">
+        <button class="addbutton" type="button" ng-click="modal.createRoom()">add room</button>
+      </div>
         <div class="column fourth">
           <div class="rooms" ng-repeat="room in allRooms">
             <h4> {{ room.name }} </h4>

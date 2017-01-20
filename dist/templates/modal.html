@@ -4,11 +4,11 @@
 
 <div class="modal-body" id="modal-body">
   <div class="form-group">
-    <input type="text" placeholder="Enter new chat room name..." class="form-control" ng-model="text">
+    <input type="text" placeholder="Enter new chat room name..." class="form-control" ng-model="modalInstance.roomName"/>
   </div>
 </div>
 
 <div class="modal-footer">
-  <button class="btn btn-success" ng-click="ok()">create</button>
-  <button class="btn btn-danger" ng-click="cancel()">cancel</button>
+  <button class="btn btn-primary" type="button" ng-click="modalInstance.ok()">create</button>
+  <button class="btn btn-danger" type="button" ng-click="modalInstance.cancel()">cancel</button>
 </div>
