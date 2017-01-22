@@ -1,13 +1,16 @@
-.jumbotron {
-  position: relative;
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 0.5rem;
+  width: 20%;
+  height: 100%;
+  background-color: rgb(192,192,192)
 }
 
-.sidebar {
-  position: relative;
-  clear: both;
-  padding: 0.5rem;
-  height: 1000px;
-  background-color: rgb(192,192,192)
+.sidebar-header {
+  padding-left: 10px;
+  margin-bottom: 5px;
 }
 
 .sidebar #title {
@@ -20,6 +23,11 @@
   text-align: center;
   margin: auto;
   padding-top: 15px;
+}
+
+.sidebar .rooms .roomlist:hover {
+  cursor: pointer;
+  padding: 5px;
 }
 
 .sidebar .rooms .addbutton {

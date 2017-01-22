@@ -1,31 +1,29 @@
 <div ng-controller="HomeCtrl as home">
-  <div class="sidebar">
-    <h1 id="sidebar-title">Bloc Chat</h1>
+  <section class="sidebar">
+    <div class="sidebar-header">
+      <h1 id="title">Bloc Chat</h1>
 
-    <div class="rooms">
-      <div ng-repeat="myRoom in home.chatRooms">
-        <h3>{{ home.allRooms }}</h3>
-      </div>
-      <div ng-controller="ModalCtrl as modal">
-        <button class="addbutton" type="button" ng-click="modal.createRoom()">add room</button>
-      </div>
-        <div class="column fourth">
-          <div class="rooms" ng-repeat="room in allRooms">
-            <h4> {{ room.name }} </h4>
-          </div>
+      <div class="rooms">
+        <div ng-controller="ModalCtrl as modal">
+          <button class="addbutton" type="button" ng-click="modal.createRoom()">add room</button>
         </div>
-    </div>
-
-    <div class="messages">
-      <div class="messages-header">
-        <h4>{{ home.activeRoom.name }}</h4>
-      </div>
-      <div class="messages-body">
-        <div class="username">{{ messages.username }}</div>
-        <div class="time">{{ messages.sentAt }}</div>
-        <div class="content">{{ messages.content }}</div>
+        <br />
+        <br />
+        <div class="roomlist" ng-repeat="room in home.rooms">
+          <h4 ng-click="home.setCurrentRoom(room)"> {{ room.name }} </h4>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
+  <section class="messages">
+    <div class="messages-header">
+      <h4>{{ home.activeRoom.name }}</h4>
+    </div>
+    <div class="messages-body" ng-repeat="message in home.messages">
+      <div class="username">{{ messages.username }}</div>
+      <div class="time">{{ messages.sentAt }}</div>
+      <div class="content">{{ messages.content }}</div>
+    </div>
+  </section>
 </div>

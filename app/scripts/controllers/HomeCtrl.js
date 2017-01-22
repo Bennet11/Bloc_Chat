@@ -1,12 +1,12 @@
 (function() {
-  function HomeCtrl(Room, $scope, Message) {
-    $scope.rooms = Room.all;
-    $scope.activeRoom = null;
+  function HomeCtrl(Room, Message) {
+    this.rooms = Room.all;
+    this.activeRoom = null;
 
-    $scope.setCurrentRoom = function(room) {
-      $scope.activeRoom = room;
-      $scope.roomName = room.name;
-      $scope.messages = Message.getByRoomId(this.activeRoom.$id);
+    this.setCurrentRoom = function(room) {
+      this.activeRoom = room;
+      this.roomName = room.name;
+      this.messages = Message.getByRoomId(this.activeRoom.$id);
     }
  	}
 
