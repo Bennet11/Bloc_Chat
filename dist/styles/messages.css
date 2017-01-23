@@ -2,14 +2,14 @@
   position: fixed;
   top: 5px;
   left: 300px;
-  width: 80%;
+  width: 70%;
   height: 100%;
   background-color: white;
-  cursor: pointer;
 }
 
 .messages-header {
   font-weight: bold;
+  text-align: center
 }
 
 .messages-body {
@@ -34,4 +34,11 @@
   padding-top: 8px;
   padding-bottom: 8px;
   font-size: 8px;
+}
+
+.messages:hover {
+  cursor: pointer;
+}
+.messages-body:active {
+  background-color: lightgray;
 }

@@ -12,5 +12,5 @@
 
   angular
     .module('blocChat')
-    .controller('HomeCtrl', ['Room', '$scope', 'Message', HomeCtrl]);
+    .controller('HomeCtrl', ['Room', 'Message', HomeCtrl]);
 })();
