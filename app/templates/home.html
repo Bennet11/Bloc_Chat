@@ -21,9 +21,9 @@
       <h4>{{ home.activeRoom.name }}</h4>
     </div>
     <div class="messages-body" ng-repeat="message in home.messages">
-      <div class="username">{{ messages.username }}</div>
-      <div class="time">{{ messages.sentAt }}</div>
-      <div class="content">{{ messages.content }}</div>
+      <div class="username">{{ message.username }}</div>
+      <div class="time">{{ message.sentAt }}</div>
+      <div class="content">{{ message.content }}</div>
     </div>
   </section>
 </div>

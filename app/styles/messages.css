@@ -1,5 +1,5 @@
 .messages {
-  position: relative;
+  position: fixed;
   top: 5px;
   left: 300px;
   width: 80%;
