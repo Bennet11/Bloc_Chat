@@ -4,10 +4,10 @@
 
 <div class="modal-body" id="modal-body">
   <div class="form-group">
-    <input type="text" placeholder="Register a user" class="form-control" ng-model="modalInstance.roomName"/>
+    <input type="text" placeholder="Register a user" class="form-control" ng-model="modalInstance.user"/>
   </div>
 </div>
 
 <div class="modal-footer">
-  <button class="btn btn-primary" type="button" ng-click="usermodalInstance.addUser()">register</button>
+  <button class="btn btn-primary" type="button" ng-click="usermodalInstance.addUser(modalInstance.user)">register</button>
 </div>
