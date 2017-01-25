@@ -42,3 +42,12 @@
 .messages-body:active {
   background-color: lightgray;
 }
+
+.message-container {
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.message-box {
+  width: 500px;
+}

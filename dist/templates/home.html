@@ -26,5 +26,10 @@
       <div class="time">{{ message.sentAt }}</div>
       <div class="content">{{ message.content }}</div>
     </div>
+
+    <div class="message-container">
+      <input class="message-box" type="text" name="input" placeholder="Enter Message Here" ng-model="home.newMessage.content">
+      <button class="btn-primary" type="button" ng-click="home.sendMessage()">Send</button>
+    </div>
   </section>
 </div>
